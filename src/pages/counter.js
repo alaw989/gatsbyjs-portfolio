@@ -29,7 +29,7 @@ class Counter extends React.Component {
         <button onClick={this.countDown}>minus</button>
       </div>
     );
-  }
+  }   
 }
 
 export default Counter;

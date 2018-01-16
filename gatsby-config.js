@@ -1,12 +1,12 @@
 module.exports = {
-  siteMetadata: {
-    title: `Portfolio Site`,
-  },
-  plugins: 
-  [
-    `gatsby-plugin-react-helmet`, 
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-typography`
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography.js`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-style-components`
   ],
-
 }

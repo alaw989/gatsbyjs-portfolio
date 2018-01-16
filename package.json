@@ -9,7 +9,9 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "^2.0.4",
     "gatsby-plugin-typography": "^1.7.10",
-    "styled-components": "^2.4.0"
+    "styled-components": "^2.4.0",
+    "typography-theme-bootstrap": "^0.16.7",
+    "typography-theme-github": "^0.15.10"
   },
   "keywords": [
     "gatsby"
