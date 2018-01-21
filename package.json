@@ -9,6 +9,8 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "^2.0.4",
     "gatsby-plugin-typography": "^1.7.10",
+    "react-background-video-player": "^1.0.1",
+    "react-html5video": "^2.5.1",
     "styled-components": "^2.4.0",
     "typography-theme-bootstrap": "^0.16.7",
     "typography-theme-github": "^0.15.10"

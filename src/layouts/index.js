@@ -3,12 +3,20 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import styled from "styled-components";
+import { DefaultPlayer as Video } from 'react-html5video';
+import 'react-html5video/dist/styles.css';
+import code2 from "./code2.mp4";
 
 import "./index.css";
 
+
+const videoWrapper = styled.div`
+  
+`
 const ListWrapper = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   list-style: none;
   margin: 0;
@@ -20,12 +28,13 @@ const ListLink = styled.li`
   > * {
     text-decoration: none;
     color: white;
+    margin: 0 15px;
   }
 `;
 
 const Foot = styled.div`
-  background: tomato;
-  height: 40px;
+  background: transparent;
+  height: 10vh;
   margin: 0 auto;
 `;
 
@@ -33,8 +42,8 @@ const Foot = styled.div`
 const Header = () => (
   <div
     style={{
-      background: "tomato",
-      marginBottom: "1.45rem"
+      background: "transparent",
+      height: "10vh"
     }}
   >
     <div
@@ -54,7 +63,7 @@ const Header = () => (
             textDecoration: "none"
           }}
         >
-          Gatsby
+          AL
         </Link>
       </h1>
       <ListWrapper>
@@ -79,6 +88,10 @@ const Footer = () => (
 
 const TemplateWrapper = ({ children }) => (
   <div>
+  <video preload={"auto"} autoPlay={"autoplay"} muted loop
+    style={{position: "fixed", minWidth: "100vw", zIndex: "-1000", opacity: "1"}}>
+    <source src={code2} type={'video/mp4'}/>
+  </video>
     <Helmet
       title="Gatsby Default Starter"
       meta={[
@@ -92,12 +105,22 @@ const TemplateWrapper = ({ children }) => (
         margin: "0 auto",
         maxWidth: 960,
         padding: "0px 1.0875rem 1.45rem",
-        paddingTop: 0
+        paddingTop: 0,
+        height: "80vh"
       }}
     >
       {children()}
     </div>
-    <Foot/> 
+    <Foot>
+    <ListWrapper>
+    <h2> Where To Find Me</h2>
+      <ListLink>
+        <Link to="http://www.facebook.com">Facebook</Link>
+        <Link to="http://www.facebook.com">Github</Link>
+        <Link to="http://www.facebook.com">Linked In</Link>
+      </ListLink>
+    </ListWrapper>
+    </Foot> 
   </div>
 );
 

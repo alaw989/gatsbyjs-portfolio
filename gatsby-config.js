@@ -7,6 +7,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-style-components`
+    `gatsby-plugin-styled-components`
   ],
 }
